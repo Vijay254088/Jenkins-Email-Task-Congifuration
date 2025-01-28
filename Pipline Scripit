@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    stages {
+        stage('Send Email') {
+            steps {
+                mail bcc: '',
+                     body: 'Hello, This is an email from Jenkins pipeline.',
+                     cc: '',
+                     from: '',
+                     replyTo: '',
+                     subject: 'Email Jenkins Pipeline',
+                     to: 'vijayakumar192.16.10.1@gmail.com'
+            }
+        }
+    }
+}
